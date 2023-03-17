@@ -1,0 +1,20 @@
+import express from 'express';
+import accountRouter from './account.router.js';
+import authRouter from './auth.router.js';
+import categoryRouter from './category.router.js';
+import orderRouter from './order.router.js';
+import productRouter from './product.router.js';
+import productUnitTypeRouter from './productUnitType.router.js';
+import adminRouter from './admin.router.js';
+import orderShippingSupplyRouter from './orderShippingSupply.router.js';
+const apiRoute = express();
+
+apiRoute.use('/product',productRouter);
+apiRoute.use('/account',accountRouter);
+apiRoute.use('/order',orderRouter);
+apiRoute.use('/auth',authRouter);
+apiRoute.use('/category',categoryRouter);
+apiRoute.use('/productUnitType',productUnitTypeRouter);
+apiRoute.use('/admin',adminRouter);
+apiRoute.use('/shippingSupply',orderShippingSupplyRouter);
+export default apiRoute;
