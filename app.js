@@ -19,7 +19,7 @@ const accessLogStream = fs.readFileSync("./logs/access.log",{
     path: path.join(__dirname, 'log')
 });
 const isProduction = process.env.NODE_ENV === 'production';
-const port = process.env.LISTENING_PORT || 8888;
+const port = process.env.LISTENING_PORT || 3000;
 const app = express();
 app.use(cookieParser());
 // app.use(morgan(isProduction ? morgan("combined", {stream : accessLogStream}): morgan("dev") ) );
